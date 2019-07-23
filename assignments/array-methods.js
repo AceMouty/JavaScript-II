@@ -177,7 +177,7 @@ console.log(shirtSizes);
 
 companyNames = [];
 
-runners.forEach((runner)=>{
+runners.forEach((runner) => {
 	companyNames.push(runner.email);
 })
 
