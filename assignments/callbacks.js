@@ -37,11 +37,11 @@ getLength(items, function(length){
 
 function last(arr, cb) {
 	// last passes the last item of the array into the callback.
-	return cb(arr.length - 1)
+	return cb(items[arr.length - 1])
 }
 
 last(items, function(lastItem){
-	console.log(items[lastItem]);
+	console.log(lastItem);
 })
 
 function sumNums(x, y, cb) {
@@ -62,24 +62,13 @@ multiplyNums(3,4, function(total){
 	console.log(total);
 })
 
-function contains(item, arr, cb) {
-  // contains checks if an item is present inside of the given array/list.
-	// Pass true to the callback if it is, otherwise pass false.
-	total = arr.filter( function (arrItem){
-		if(arrItem === item){
-			return cb(true)
-		}
-		else{
-			return cb(false)
-		}
-	})
-}; 
+	function contains(item, arr, cb) {
+ 	 return cb(total = arr.includes(item));
+	}
 
-contains("Gum", items, function(result){
+	contains("Gum", items, function(result){
 	console.log(result);
-})
-
-
+	})
 /* STRETCH PROBLEM */
 
 function removeDuplicates(array, cb) {

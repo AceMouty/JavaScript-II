@@ -69,8 +69,8 @@ console.log(fullName);
 let allCaps = [];
 
 runners.map((runner) => {
-	runner.first_name.toUpperCase
-	allCaps.push(runner);
+	// runner.first_name.toUpperCase()
+	allCaps.push(runner.first_name.toUpperCase());
 
 	// allcaps.push(runner.first_name.toUpperCase);
 })
